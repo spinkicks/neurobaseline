@@ -1,10 +1,13 @@
 # Ignore Mac system files
 .DS_Store
 
-# Ignore Python Environment and compilation
+# Ignore Python environment and compilation
 backend/venv/
 backend/__pycache__/
 *.pyc
+
+# Ignore generated results
+results.json
 
 # Ignore Node modules and Next.js builds
 frontend/node_modules/
