@@ -494,5 +494,17 @@
       }
     ]
   },
-  "explanations": []
+  "explanations": [
+  {
+    "t": "2025-12-05",
+    "severity": "high",
+    "text": "Reaction-time variability jumped ~35% vs your baseline. This can reflect unstable attention or cognitive fatigue."
+  },
+  {
+    "t": "2025-12-10",
+    "severity": "medium",
+    "text": "Typing rhythm became more irregular than your norm, suggesting reduced motor fluency or increased mental load."
+  }
+]
+
 }
