@@ -1,65 +1,178 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import Plot from "react-plotly.js";
+
+type Point = { t: string; value: number };
+type Explanation = { t: string; severity: string; text: string };
+
+type Results = {
+  nvi: Point[];
+  change_points: string[];
+  features: Record<string, Point[]>;
+  explanations: Explanation[];
+};
 
 export default function Home() {
+  const [data, setData] = useState<Results | null>(null);
+  const [featureKey, setFeatureKey] = useState<string>("rt_var");
+
+  useEffect(() => {
+    fetch("/results.json")
+      .then((r) => r.json())
+      .then((j) => setData(j))
+      .catch((e) => console.error(e));
+  }, []);
+
+  const featureOptions = useMemo(() => {
+    if (!data) return [];
+    return Object.keys(data.features || {});
+  }, [data]);
+
+  useEffect(() => {
+    if (featureOptions.length && !featureOptions.includes(featureKey)) {
+      setFeatureKey(featureOptions[0]);
+    }
+  }, [featureOptions, featureKey]);
+
+  if (!data) return <div style={{ padding: 24 }}>Loading results.json…</div>;
+
+  const nviX = data.nvi.map((p) => p.t);
+  const nviY = data.nvi.map((p) => p.value);
+
+  const shapes =
+    data.change_points?.map((cp) => ({
+      type: "line" as const,
+      x0: cp,
+      x1: cp,
+      y0: 0,
+      y1: 100,
+      xref: "x" as const,
+      yref: "y" as const,
+      line: { width: 2, dash: "dot" as const },
+    })) ?? [];
+
+  const featSeries = data.features?.[featureKey] ?? [];
+  const featX = featSeries.map((p) => p.t);
+  const featY = featSeries.map((p) => p.value);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div style={{ padding: 24, display: "grid", gap: 16 }}>
+      <h1 style={{ fontSize: 28, margin: 0 }}>NeuroSentinel — NVI Dashboard</h1>
+
+      {/* 3-panel layout */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "2fr 1fr",
+          gap: 16,
+          alignItems: "start",
+        }}
+      >
+        {/* A) Big chart */}
+        <div style={{ border: "1px solid #333", borderRadius: 12, padding: 12 }}>
+          <h2 style={{ margin: "0 0 8px 0" }}>Neuro Variability Index (0–100)</h2>
+          <Plot
+            data={[
+              {
+                x: nviX,
+                y: nviY,
+                type: "scatter",
+                mode: "lines+markers",
+                name: "NVI",
+              },
+            ]}
+            layout={{
+              height: 420,
+              margin: { l: 50, r: 20, t: 20, b: 50 },
+              yaxis: { range: [0, 100], title: "Stability" },
+              xaxis: { title: "Date" },
+              shapes,
+            }}
+            config={{ displayModeBar: false }}
+            style={{ width: "100%" }}
+          />
+        </div>
+
+        {/* B) What changed panel */}
+        <div style={{ border: "1px solid #333", borderRadius: 12, padding: 12 }}>
+          <h2 style={{ margin: "0 0 8px 0" }}>What changed?</h2>
+          <div style={{ display: "grid", gap: 10 }}>
+            {data.explanations?.length ? (
+              data.explanations.map((ex, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    border: "1px solid #444",
+                    borderRadius: 10,
+                    padding: 10,
+                  }}
+                >
+                  <div style={{ fontSize: 12, opacity: 0.85 }}>
+                    {ex.t} • <b>{ex.severity}</b>
+                  </div>
+                  <div style={{ marginTop: 6 }}>{ex.text}</div>
+                </div>
+              ))
+            ) : (
+              <div style={{ opacity: 0.8 }}>
+                No explanations found in results.json.
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* C) Drill-down */}
+      <div style={{ border: "1px solid #333", borderRadius: 12, padding: 12 }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 12,
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          <h2 style={{ margin: 0 }}>Feature drill-down</h2>
+
+          <label style={{ display: "flex", gap: 8, alignItems: "center" }}>
+            Feature:
+            <select
+              value={featureKey}
+              onChange={(e) => setFeatureKey(e.target.value)}
+            >
+              {featureOptions.map((k) => (
+                <option key={k} value={k}>
+                  {k}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <Plot
+          data={[
+            {
+              x: featX,
+              y: featY,
+              type: "scatter",
+              mode: "lines+markers",
+              name: featureKey,
+            },
+          ]}
+          layout={{
+            height: 360,
+            margin: { l: 50, r: 20, t: 20, b: 50 },
+            xaxis: { title: "Date" },
+            yaxis: { title: featureKey },
+          }}
+          config={{ displayModeBar: false }}
+          style={{ width: "100%" }}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
   );
 }
+
+
