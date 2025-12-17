@@ -5,16 +5,12 @@
   },
   "nvi": [
     {
-      "t": "2025-11-17",
+      "t": "2025-11-18",
       "value": 87.62101145733392
     },
     {
-      "t": "2025-11-18",
-      "value": 87.6210135050806
-    },
-    {
       "t": "2025-11-19",
-      "value": 87.62101350508063
+      "value": 87.6210135050806
     },
     {
       "t": "2025-11-20",
@@ -22,106 +18,110 @@
     },
     {
       "t": "2025-11-21",
-      "value": 97.75448290224327
+      "value": 87.62101350508063
     },
     {
       "t": "2025-11-22",
-      "value": 71.83115387732762
+      "value": 97.75448290224327
     },
     {
       "t": "2025-11-23",
-      "value": 85.72979733009424
+      "value": 71.83115387732762
     },
     {
       "t": "2025-11-24",
-      "value": 94.938436541796
+      "value": 85.72979733009424
     },
     {
       "t": "2025-11-25",
-      "value": 39.0605378494894
+      "value": 94.938436541796
     },
     {
       "t": "2025-11-26",
-      "value": 46.08517432282289
+      "value": 39.0605378494894
     },
     {
       "t": "2025-11-27",
-      "value": 48.25707987153037
+      "value": 46.08517432282289
     },
     {
       "t": "2025-11-28",
-      "value": 41.80331128422144
+      "value": 48.25707987153037
     },
     {
       "t": "2025-11-29",
-      "value": 48.79403205199921
+      "value": 41.80331128422144
     },
     {
       "t": "2025-11-30",
-      "value": 70.63125551361617
+      "value": 48.79403205199921
     },
     {
       "t": "2025-12-01",
-      "value": 50.5879005023032
+      "value": 70.63125551361617
     },
     {
       "t": "2025-12-02",
-      "value": 93.2450749170481
+      "value": 50.5879005023032
     },
     {
       "t": "2025-12-03",
-      "value": 56.9215600195411
+      "value": 93.2450749170481
     },
     {
       "t": "2025-12-04",
-      "value": 29.33216237333217
+      "value": 56.9215600195411
     },
     {
       "t": "2025-12-05",
-      "value": 37.287669481236364
+      "value": 29.33216237333217
     },
     {
       "t": "2025-12-06",
-      "value": 16.186481690805
+      "value": 37.287669481236364
     },
     {
       "t": "2025-12-07",
-      "value": 13.592163163518245
+      "value": 16.186481690805
     },
     {
       "t": "2025-12-08",
-      "value": 9.458948731085723
+      "value": 13.592163163518245
     },
     {
       "t": "2025-12-09",
-      "value": 6.410596926672686
+      "value": 9.458948731085723
     },
     {
       "t": "2025-12-10",
-      "value": 11.47389669213934
+      "value": 6.410596926672686
     },
     {
       "t": "2025-12-11",
-      "value": 5.615684893034627
+      "value": 11.47389669213934
     },
     {
       "t": "2025-12-12",
-      "value": 2.262640253700386
+      "value": 5.615684893034627
     },
     {
       "t": "2025-12-13",
-      "value": 1.4420928388407246
+      "value": 2.262640253700386
     },
     {
       "t": "2025-12-14",
-      "value": 0.7648725375089098
+      "value": 1.4420928388407246
     },
     {
       "t": "2025-12-15",
-      "value": 0.1931359990165878
+      "value": 0.7648725375089098
     },
     {
       "t": "2025-12-16",
+      "value": 0.1931359990165878
+    },
+    {
+      "t": "2025-12-17",
       "value": 0.05317880277543475
     }
   ],
@@ -129,10 +129,6 @@
   "features": {
     "rt_var": [
       {
-        "t": "2025-11-17",
-        "value": 26.597069596428703
-      },
-      {
         "t": "2025-11-18",
         "value": 26.597069596428703
       },
@@ -142,119 +138,119 @@
       },
       {
         "t": "2025-11-20",
-        "value": 83.22543989205218
+        "value": 26.597069596428703
       },
       {
         "t": "2025-11-21",
-        "value": 66.10450215597875
+        "value": 83.22543989205218
       },
       {
         "t": "2025-11-22",
-        "value": 81.48399662093068
+        "value": 66.10450215597875
       },
       {
         "t": "2025-11-23",
-        "value": 77.08233503698791
+        "value": 81.48399662093068
       },
       {
         "t": "2025-11-24",
-        "value": 206.74608618730167
+        "value": 77.08233503698791
       },
       {
         "t": "2025-11-25",
-        "value": 199.05430724253162
+        "value": 206.74608618730167
       },
       {
         "t": "2025-11-26",
-        "value": 205.76081700407246
+        "value": 199.05430724253162
       },
       {
         "t": "2025-11-27",
-        "value": 204.83201746671202
+        "value": 205.76081700407246
       },
       {
         "t": "2025-11-28",
-        "value": 203.84003650425757
+        "value": 204.83201746671202
       },
       {
         "t": "2025-11-29",
-        "value": 139.63766110223136
+        "value": 203.84003650425757
       },
       {
         "t": "2025-11-30",
-        "value": 197.57291106198014
+        "value": 139.63766110223136
       },
       {
         "t": "2025-12-01",
-        "value": 91.42340300828805
+        "value": 197.57291106198014
       },
       {
         "t": "2025-12-02",
-        "value": 114.09345211293798
+        "value": 91.42340300828805
       },
       {
         "t": "2025-12-03",
-        "value": 187.58754430757426
+        "value": 114.09345211293798
       },
       {
         "t": "2025-12-04",
-        "value": 169.41734002586267
+        "value": 187.58754430757426
       },
       {
         "t": "2025-12-05",
-        "value": 262.5143151560949
+        "value": 169.41734002586267
       },
       {
         "t": "2025-12-06",
-        "value": 255.5828798679623
+        "value": 262.5143151560949
       },
       {
         "t": "2025-12-07",
-        "value": 255.27485894142976
+        "value": 255.5828798679623
       },
       {
         "t": "2025-12-08",
-        "value": 223.53161840465168
+        "value": 255.27485894142976
       },
       {
         "t": "2025-12-09",
-        "value": 151.46963568512993
+        "value": 223.53161840465168
       },
       {
         "t": "2025-12-10",
-        "value": 197.79467201334478
+        "value": 151.46963568512993
       },
       {
         "t": "2025-12-11",
-        "value": 327.8146079994347
+        "value": 197.79467201334478
       },
       {
         "t": "2025-12-12",
-        "value": 340.09445368754683
+        "value": 327.8146079994347
       },
       {
         "t": "2025-12-13",
-        "value": 426.891358018936
+        "value": 340.09445368754683
       },
       {
         "t": "2025-12-14",
-        "value": 672.8691640494834
+        "value": 426.891358018936
       },
       {
         "t": "2025-12-15",
-        "value": 849.2815891668356
+        "value": 672.8691640494834
       },
       {
         "t": "2025-12-16",
+        "value": 849.2815891668356
+      },
+      {
+        "t": "2025-12-17",
         "value": 785.624236338772
       }
     ],
     "iki_var": [
       {
-        "t": "2025-11-17",
-        "value": 22.444509543662818
-      },
-      {
         "t": "2025-11-18",
         "value": 22.444509543662818
       },
@@ -264,119 +260,119 @@
       },
       {
         "t": "2025-11-20",
-        "value": 15.668345317914714
+        "value": 22.444509543662818
       },
       {
         "t": "2025-11-21",
-        "value": 77.18199199082751
+        "value": 15.668345317914714
       },
       {
         "t": "2025-11-22",
-        "value": 62.66287017259155
+        "value": 77.18199199082751
       },
       {
         "t": "2025-11-23",
-        "value": 55.81929744949716
+        "value": 62.66287017259155
       },
       {
         "t": "2025-11-24",
-        "value": 56.816082863172404
+        "value": 55.81929744949716
       },
       {
         "t": "2025-11-25",
-        "value": 57.83754265571796
+        "value": 56.816082863172404
       },
       {
         "t": "2025-11-26",
-        "value": 47.86253891284533
+        "value": 57.83754265571796
       },
       {
         "t": "2025-11-27",
-        "value": 38.97994381751803
+        "value": 47.86253891284533
       },
       {
         "t": "2025-11-28",
-        "value": 23.924513475299566
+        "value": 38.97994381751803
       },
       {
         "t": "2025-11-29",
-        "value": 34.277352816039645
+        "value": 23.924513475299566
       },
       {
         "t": "2025-11-30",
-        "value": 34.693366680937764
+        "value": 34.277352816039645
       },
       {
         "t": "2025-12-01",
-        "value": 50.0643036871246
+        "value": 34.693366680937764
       },
       {
         "t": "2025-12-02",
-        "value": 74.83379869426825
+        "value": 50.0643036871246
       },
       {
         "t": "2025-12-03",
-        "value": 87.59147792555073
+        "value": 74.83379869426825
       },
       {
         "t": "2025-12-04",
-        "value": 87.62931736248918
+        "value": 87.59147792555073
       },
       {
         "t": "2025-12-05",
-        "value": 91.36849126105544
+        "value": 87.62931736248918
       },
       {
         "t": "2025-12-06",
-        "value": 76.59065122520133
+        "value": 91.36849126105544
       },
       {
         "t": "2025-12-07",
-        "value": 85.78125796423852
+        "value": 76.59065122520133
       },
       {
         "t": "2025-12-08",
-        "value": 123.76315762190875
+        "value": 85.78125796423852
       },
       {
         "t": "2025-12-09",
-        "value": 107.89565578470383
+        "value": 123.76315762190875
       },
       {
         "t": "2025-12-10",
-        "value": 111.63075647407622
+        "value": 107.89565578470383
       },
       {
         "t": "2025-12-11",
-        "value": 111.59100046709239
+        "value": 111.63075647407622
       },
       {
         "t": "2025-12-12",
-        "value": 111.56632580216366
+        "value": 111.59100046709239
       },
       {
         "t": "2025-12-13",
-        "value": 120.63953314016982
+        "value": 111.56632580216366
       },
       {
         "t": "2025-12-14",
-        "value": 115.01656139863782
+        "value": 120.63953314016982
       },
       {
         "t": "2025-12-15",
-        "value": 128.36421531342054
+        "value": 115.01656139863782
       },
       {
         "t": "2025-12-16",
+        "value": 128.36421531342054
+      },
+      {
+        "t": "2025-12-17",
         "value": 91.94197858343097
       }
     ],
     "backspace_rate": [
       {
-        "t": "2025-11-17",
-        "value": 0.05933549722538512
-      },
-      {
         "t": "2025-11-18",
         "value": 0.05933549722538512
       },
@@ -386,125 +382,602 @@
       },
       {
         "t": "2025-11-20",
-        "value": 0.055049643439600816
+        "value": 0.05933549722538512
       },
       {
         "t": "2025-11-21",
-        "value": 0.05430180996217263
+        "value": 0.055049643439600816
       },
       {
         "t": "2025-11-22",
-        "value": 0.05476101836979929
+        "value": 0.05430180996217263
       },
       {
         "t": "2025-11-23",
-        "value": 0.05743536690004312
+        "value": 0.05476101836979929
       },
       {
         "t": "2025-11-24",
-        "value": 0.05945411703660995
+        "value": 0.05743536690004312
       },
       {
         "t": "2025-11-25",
-        "value": 0.057610788002440294
+        "value": 0.05945411703660995
       },
       {
         "t": "2025-11-26",
-        "value": 0.05563526490841269
+        "value": 0.057610788002440294
       },
       {
         "t": "2025-11-27",
-        "value": 0.059565474802177464
+        "value": 0.05563526490841269
       },
       {
         "t": "2025-11-28",
-        "value": 0.05653736440002357
+        "value": 0.059565474802177464
       },
       {
         "t": "2025-11-29",
-        "value": 0.05596527748827813
+        "value": 0.05653736440002357
       },
       {
         "t": "2025-11-30",
-        "value": 0.05383088292162707
+        "value": 0.05596527748827813
       },
       {
         "t": "2025-12-01",
-        "value": 0.05407043928555425
+        "value": 0.05383088292162707
       },
       {
         "t": "2025-12-02",
-        "value": 0.05838386434210071
+        "value": 0.05407043928555425
       },
       {
         "t": "2025-12-03",
-        "value": 0.05938549779731111
+        "value": 0.05838386434210071
       },
       {
         "t": "2025-12-04",
-        "value": 0.057209470690153856
+        "value": 0.05938549779731111
       },
       {
         "t": "2025-12-05",
-        "value": 0.06094280865513222
+        "value": 0.057209470690153856
       },
       {
         "t": "2025-12-06",
-        "value": 0.06653237613222567
+        "value": 0.06094280865513222
       },
       {
         "t": "2025-12-07",
-        "value": 0.06988313375710302
+        "value": 0.06653237613222567
       },
       {
         "t": "2025-12-08",
-        "value": 0.07092532039831105
+        "value": 0.06988313375710302
       },
       {
         "t": "2025-12-09",
-        "value": 0.07147647540684468
+        "value": 0.07092532039831105
       },
       {
         "t": "2025-12-10",
-        "value": 0.07694696492691946
+        "value": 0.07147647540684468
       },
       {
         "t": "2025-12-11",
-        "value": 0.079148428562417
+        "value": 0.07694696492691946
       },
       {
         "t": "2025-12-12",
-        "value": 0.08436032256510896
+        "value": 0.079148428562417
       },
       {
         "t": "2025-12-13",
-        "value": 0.08457498997455962
+        "value": 0.08436032256510896
       },
       {
         "t": "2025-12-14",
-        "value": 0.08502304881479884
+        "value": 0.08457498997455962
       },
       {
         "t": "2025-12-15",
-        "value": 0.08638316573450876
+        "value": 0.08502304881479884
       },
       {
         "t": "2025-12-16",
+        "value": 0.08638316573450876
+      },
+      {
+        "t": "2025-12-17",
         "value": 0.08970102109088973
       }
     ]
   },
+  "ml": [
+    {
+      "t": "2025-11-18",
+      "value": 18.91665524224668
+    },
+    {
+      "t": "2025-11-19",
+      "value": 18.91665524224668
+    },
+    {
+      "t": "2025-11-20",
+      "value": 18.91665524224668
+    },
+    {
+      "t": "2025-11-21",
+      "value": 66.87458340604877
+    },
+    {
+      "t": "2025-11-22",
+      "value": 88.4848642939508
+    },
+    {
+      "t": "2025-11-23",
+      "value": 2.040544721098107
+    },
+    {
+      "t": "2025-11-24",
+      "value": 0.0
+    },
+    {
+      "t": "2025-11-25",
+      "value": 60.45113488247572
+    },
+    {
+      "t": "2025-11-26",
+      "value": 19.983881609246417
+    },
+    {
+      "t": "2025-11-27",
+      "value": 56.216176474188764
+    },
+    {
+      "t": "2025-11-28",
+      "value": 86.67772422084919
+    },
+    {
+      "t": "2025-11-29",
+      "value": 75.70235597296043
+    },
+    {
+      "t": "2025-11-30",
+      "value": 48.008687876064876
+    },
+    {
+      "t": "2025-12-01",
+      "value": 99.99999912889149
+    },
+    {
+      "t": "2025-12-02",
+      "value": 37.99381736797617
+    },
+    {
+      "t": "2025-12-03",
+      "value": 66.16888232670492
+    },
+    {
+      "t": "2025-12-04",
+      "value": 91.04724844285953
+    },
+    {
+      "t": "2025-12-05",
+      "value": 62.513950568815076
+    },
+    {
+      "t": "2025-12-06",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-07",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-08",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-09",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-10",
+      "value": 87.95760522225325
+    },
+    {
+      "t": "2025-12-11",
+      "value": 96.711881016839
+    },
+    {
+      "t": "2025-12-12",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-13",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-14",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-15",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-16",
+      "value": 96.90820574981096
+    },
+    {
+      "t": "2025-12-17",
+      "value": 96.90820574981096
+    }
+  ],
+  "ml_explanations": [
+    {
+      "t": "2025-11-18",
+      "severity": "low",
+      "tag": "motor",
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-19",
+      "severity": "low",
+      "tag": "motor",
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-20",
+      "severity": "low",
+      "tag": "motor",
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-21",
+      "severity": "medium",
+      "tag": "motor",
+      "text": "ML anomaly score 66.9/100. Biggest driver: iki_var (-1.4\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-22",
+      "severity": "high",
+      "tag": "motor",
+      "text": "ML anomaly score 88.5/100. Biggest driver: iki_var (+1.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-23",
+      "severity": "low",
+      "tag": "fatigue",
+      "text": "ML anomaly score 2.0/100. Biggest driver: backspace_rate (-1.2\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-24",
+      "severity": "low",
+      "tag": "motor",
+      "text": "ML anomaly score 0.0/100. Biggest driver: iki_var (+0.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-25",
+      "severity": "medium",
+      "tag": "attention",
+      "text": "ML anomaly score 60.5/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-26",
+      "severity": "low",
+      "tag": "attention",
+      "text": "ML anomaly score 20.0/100. Biggest driver: rt_var (+1.4\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-27",
+      "severity": "medium",
+      "tag": "attention",
+      "text": "ML anomaly score 56.2/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-28",
+      "severity": "high",
+      "tag": "attention",
+      "text": "ML anomaly score 86.7/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-29",
+      "severity": "high",
+      "tag": "attention",
+      "text": "ML anomaly score 75.7/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-30",
+      "severity": "medium",
+      "tag": "fatigue",
+      "text": "ML anomaly score 48.0/100. Biggest driver: backspace_rate (-0.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-01",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 100.0/100. Biggest driver: backspace_rate (-1.7\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-02",
+      "severity": "low",
+      "tag": "fatigue",
+      "text": "ML anomaly score 38.0/100. Biggest driver: backspace_rate (-1.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-03",
+      "severity": "medium",
+      "tag": "motor",
+      "text": "ML anomaly score 66.2/100. Biggest driver: iki_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-04",
+      "severity": "high",
+      "tag": "motor",
+      "text": "ML anomaly score 91.0/100. Biggest driver: iki_var (+2.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-05",
+      "severity": "medium",
+      "tag": "motor",
+      "text": "ML anomaly score 62.5/100. Biggest driver: iki_var (+2.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-06",
+      "severity": "high",
+      "tag": "motor",
+      "text": "ML anomaly score 96.9/100. Biggest driver: iki_var (+2.3\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-07",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+4.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-08",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.3\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-09",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.8\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-10",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 88.0/100. Biggest driver: backspace_rate (+7.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-11",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.7/100. Biggest driver: backspace_rate (+9.8\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-12",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+10.9\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-13",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-14",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-15",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.8\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-16",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+14.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-17",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+16.2\u03c3 vs baseline)."
+    }
+  ],
   "explanations": [
-  {
-    "t": "2025-12-05",
-    "severity": "high",
-    "text": "Reaction-time variability jumped ~35% vs your baseline. This can reflect unstable attention or cognitive fatigue."
-  },
-  {
-    "t": "2025-12-10",
-    "severity": "medium",
-    "text": "Typing rhythm became more irregular than your norm, suggesting reduced motor fluency or increased mental load."
-  }
-]
-
+    {
+      "t": "2025-11-18",
+      "severity": "low",
+      "tag": "motor",
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-19",
+      "severity": "low",
+      "tag": "motor",
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-20",
+      "severity": "low",
+      "tag": "motor",
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-21",
+      "severity": "medium",
+      "tag": "motor",
+      "text": "ML anomaly score 66.9/100. Biggest driver: iki_var (-1.4\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-22",
+      "severity": "high",
+      "tag": "motor",
+      "text": "ML anomaly score 88.5/100. Biggest driver: iki_var (+1.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-23",
+      "severity": "low",
+      "tag": "fatigue",
+      "text": "ML anomaly score 2.0/100. Biggest driver: backspace_rate (-1.2\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-24",
+      "severity": "low",
+      "tag": "motor",
+      "text": "ML anomaly score 0.0/100. Biggest driver: iki_var (+0.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-25",
+      "severity": "medium",
+      "tag": "attention",
+      "text": "ML anomaly score 60.5/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-26",
+      "severity": "low",
+      "tag": "attention",
+      "text": "ML anomaly score 20.0/100. Biggest driver: rt_var (+1.4\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-27",
+      "severity": "medium",
+      "tag": "attention",
+      "text": "ML anomaly score 56.2/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-28",
+      "severity": "high",
+      "tag": "attention",
+      "text": "ML anomaly score 86.7/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-29",
+      "severity": "high",
+      "tag": "attention",
+      "text": "ML anomaly score 75.7/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-11-30",
+      "severity": "medium",
+      "tag": "fatigue",
+      "text": "ML anomaly score 48.0/100. Biggest driver: backspace_rate (-0.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-01",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 100.0/100. Biggest driver: backspace_rate (-1.7\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-02",
+      "severity": "low",
+      "tag": "fatigue",
+      "text": "ML anomaly score 38.0/100. Biggest driver: backspace_rate (-1.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-03",
+      "severity": "medium",
+      "tag": "motor",
+      "text": "ML anomaly score 66.2/100. Biggest driver: iki_var (+1.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-04",
+      "severity": "high",
+      "tag": "motor",
+      "text": "ML anomaly score 91.0/100. Biggest driver: iki_var (+2.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-05",
+      "severity": "medium",
+      "tag": "motor",
+      "text": "ML anomaly score 62.5/100. Biggest driver: iki_var (+2.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-06",
+      "severity": "high",
+      "tag": "motor",
+      "text": "ML anomaly score 96.9/100. Biggest driver: iki_var (+2.3\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-07",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+4.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-08",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.3\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-09",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.8\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-10",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 88.0/100. Biggest driver: backspace_rate (+7.1\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-11",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.7/100. Biggest driver: backspace_rate (+9.8\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-12",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+10.9\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-13",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-14",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.6\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-15",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.8\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-16",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+14.5\u03c3 vs baseline)."
+    },
+    {
+      "t": "2025-12-17",
+      "severity": "high",
+      "tag": "fatigue",
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+16.2\u03c3 vs baseline)."
+    }
+  ]
 }

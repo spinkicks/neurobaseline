@@ -90,8 +90,8 @@ def compute_nvi(d: pd.DataFrame, baseline_days: int = 10) -> pd.DataFrame:
 def change_points_from_series(series: pd.Series, pen: float = 8.0) -> list[int]:
     y = series.to_numpy().reshape(-1, 1)
     algo = rpt.Pelt(model="rbf").fit(y)
-    cps = algo.predict(pen=pen)              # includes last index = n
-    cps = [cp for cp in cps if cp < len(series)]  # drop the terminal point
+    cps = algo.predict(pen=pen)                    # includes last index = n
+    cps = [cp for cp in cps if cp < len(series)]   # drop the terminal point
     return cps
 
 
@@ -144,9 +144,10 @@ def to_timepoints(d: pd.DataFrame, col: str) -> list[dict]:
 
 
 # --------------------------
-# 7) ML anomaly scoring (Isolation Forest)
+# 7) ML anomaly scoring (Isolation Forest) + driver attribution
 # --------------------------
 def build_ml_series(scored: pd.DataFrame, baseline_days: int) -> tuple[list[dict], list[dict]]:
+    # Feature matrix
     X = np.column_stack([
         scored["rt_var"].to_numpy(),
         scored["iki_var"].to_numpy(),
@@ -156,31 +157,54 @@ def build_ml_series(scored: pd.DataFrame, baseline_days: int) -> tuple[list[dict
     ml_series: list[dict] = []
     ml_explanations: list[dict] = []
 
-    if len(X) <= baseline_days:
+    if len(X) <= baseline_days + 2:
         return ml_series, ml_explanations
 
+    # Scale using baseline
     scaler = StandardScaler()
     X_base = scaler.fit_transform(X[:baseline_days])
     X_all = scaler.transform(X)
 
-    model = IsolationForest(n_estimators=200, random_state=42)
+    model = IsolationForest(n_estimators=200, random_state=42, contamination="auto")
     model.fit(X_base)
 
-    scores = -model.score_samples(X_all)
-    scores = (scores - scores.min()) / (scores.max() - scores.min() + 1e-9) * 100
+    # Higher = more anomalous (flip sign)
+    raw = -model.score_samples(X_all)
+
+    # Normalize 0–100
+    scores = (raw - raw.min()) / (raw.max() - raw.min() + 1e-9) * 100
+
+    # Driver attribution via z-score vs baseline
+    base_mean = X[:baseline_days].mean(axis=0)
+    base_std = X[:baseline_days].std(axis=0) + 1e-9
+    z = (X - base_mean) / base_std
+
+    feat_names = ["rt_var", "iki_var", "backspace_rate"]
+
+    def tag_for(feature_name: str) -> str:
+        if feature_name == "rt_var":
+            return "attention"
+        if feature_name == "iki_var":
+            return "motor"
+        return "fatigue"
 
     for i, tstamp in enumerate(scored["t"]):
-        d = tstamp.date().isoformat()
+        day = tstamp.date().isoformat()
         s = float(scores[i])
 
-        ml_series.append({"t": d, "value": s})
+        ml_series.append({"t": day, "value": s})
 
-        sev = "high" if s > 70 else "medium" if s > 40 else "low"
+        # pick biggest absolute baseline deviation as "driver"
+        j = int(np.argmax(np.abs(z[i])))
+        driver = feat_names[j]
+        driver_z = float(z[i][j])
+
+        sev = "high" if s >= 70 else "medium" if s >= 40 else "low"
         ml_explanations.append({
-            "t": d,
+            "t": day,
             "severity": sev,
-            "tag": "ml",
-            "text": f"ML anomaly score {s:.1f}/100 based on multivariate keystroke drift."
+            "tag": tag_for(driver),
+            "text": f"ML anomaly score {s:.1f}/100. Biggest driver: {driver} ({driver_z:+.1f}σ vs baseline)."
         })
 
     return ml_series, ml_explanations
@@ -212,6 +236,8 @@ def main():
             "backspace_rate": to_timepoints(scored, "bs_mean"),
         },
         "ml": ml_series,
+        "ml_explanations": ml_explanations,
+        # Keep UI working with zero frontend edits:
         "explanations": rule_explanations + ml_explanations,
     }
 
