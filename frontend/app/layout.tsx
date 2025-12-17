@@ -15,11 +15,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Neurobaseline",
   description: "Neuro-Predictive Baseline App",
-  icons: {
-    icon: "/neuro2.svg",
-    shortcut: "/neuro2.svg",
-    apple: "/neuro2.svg",
-  },
 };
 
 export default function RootLayout({
