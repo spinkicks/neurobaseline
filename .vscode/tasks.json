@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start Backend",
+      "type": "shell",
+      "command": "source backend/venv/bin/activate && python backend/run_pipeline.py",
+      "presentation": { "group": "neuro" }
+    },
+    {
+      "label": "Start Frontend",
+      "type": "shell",
+      "command": "cd frontend && npm run dev",
+      "presentation": { "group": "neuro" }
+    }
+  ]
+}
