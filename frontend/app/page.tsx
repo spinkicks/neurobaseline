@@ -122,17 +122,24 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/results")
-      .then((r) => r.json())
-      .then((j) => {
-        setData(j);
-        setIsLoading(false);
-      })
-      .catch((e) => {
-        console.error(e);
-        setIsLoading(false);
-      });
-  }, []);
+  setIsLoading(true);
+
+  fetch("http://127.0.0.1:8000/results")
+    .then((r) => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then((j) => {
+      setData(j);          // IMPORTANT: because /results returns the object directly
+      setIsLoading(false);
+    })
+    .catch((e) => {
+      console.error("Failed to load API results:", e);
+      setIsLoading(false);
+    });
+}, []);
+
+
 
   const featureOptions = useMemo(() => {
     if (!data) return [];

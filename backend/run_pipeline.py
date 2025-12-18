@@ -241,9 +241,9 @@ def main():
         "explanations": rule_explanations + ml_explanations,
     }
 
-    with open("results.json", "w") as f:
-        json.dump(result, f, indent=2)
-    print("✅ Wrote results.json")
+    with open("results.json", "w", encoding="utf-8") as f:
+        json.dump(result, f, indent=2, ensure_ascii=False)
+    print("Wrote results.json")
 
 
 if __name__ == "__main__":

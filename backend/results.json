@@ -621,181 +621,181 @@
       "t": "2025-11-18",
       "severity": "low",
       "tag": "motor",
-      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1σ vs baseline)."
     },
     {
       "t": "2025-11-19",
       "severity": "low",
       "tag": "motor",
-      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1σ vs baseline)."
     },
     {
       "t": "2025-11-20",
       "severity": "low",
       "tag": "motor",
-      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1σ vs baseline)."
     },
     {
       "t": "2025-11-21",
       "severity": "medium",
       "tag": "motor",
-      "text": "ML anomaly score 66.9/100. Biggest driver: iki_var (-1.4\u03c3 vs baseline)."
+      "text": "ML anomaly score 66.9/100. Biggest driver: iki_var (-1.4σ vs baseline)."
     },
     {
       "t": "2025-11-22",
       "severity": "high",
       "tag": "motor",
-      "text": "ML anomaly score 88.5/100. Biggest driver: iki_var (+1.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 88.5/100. Biggest driver: iki_var (+1.6σ vs baseline)."
     },
     {
       "t": "2025-11-23",
       "severity": "low",
       "tag": "fatigue",
-      "text": "ML anomaly score 2.0/100. Biggest driver: backspace_rate (-1.2\u03c3 vs baseline)."
+      "text": "ML anomaly score 2.0/100. Biggest driver: backspace_rate (-1.2σ vs baseline)."
     },
     {
       "t": "2025-11-24",
       "severity": "low",
       "tag": "motor",
-      "text": "ML anomaly score 0.0/100. Biggest driver: iki_var (+0.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 0.0/100. Biggest driver: iki_var (+0.6σ vs baseline)."
     },
     {
       "t": "2025-11-25",
       "severity": "medium",
       "tag": "attention",
-      "text": "ML anomaly score 60.5/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 60.5/100. Biggest driver: rt_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-11-26",
       "severity": "low",
       "tag": "attention",
-      "text": "ML anomaly score 20.0/100. Biggest driver: rt_var (+1.4\u03c3 vs baseline)."
+      "text": "ML anomaly score 20.0/100. Biggest driver: rt_var (+1.4σ vs baseline)."
     },
     {
       "t": "2025-11-27",
       "severity": "medium",
       "tag": "attention",
-      "text": "ML anomaly score 56.2/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 56.2/100. Biggest driver: rt_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-11-28",
       "severity": "high",
       "tag": "attention",
-      "text": "ML anomaly score 86.7/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 86.7/100. Biggest driver: rt_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-11-29",
       "severity": "high",
       "tag": "attention",
-      "text": "ML anomaly score 75.7/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 75.7/100. Biggest driver: rt_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-11-30",
       "severity": "medium",
       "tag": "fatigue",
-      "text": "ML anomaly score 48.0/100. Biggest driver: backspace_rate (-0.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 48.0/100. Biggest driver: backspace_rate (-0.6σ vs baseline)."
     },
     {
       "t": "2025-12-01",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 100.0/100. Biggest driver: backspace_rate (-1.7\u03c3 vs baseline)."
+      "text": "ML anomaly score 100.0/100. Biggest driver: backspace_rate (-1.7σ vs baseline)."
     },
     {
       "t": "2025-12-02",
       "severity": "low",
       "tag": "fatigue",
-      "text": "ML anomaly score 38.0/100. Biggest driver: backspace_rate (-1.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 38.0/100. Biggest driver: backspace_rate (-1.6σ vs baseline)."
     },
     {
       "t": "2025-12-03",
       "severity": "medium",
       "tag": "motor",
-      "text": "ML anomaly score 66.2/100. Biggest driver: iki_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 66.2/100. Biggest driver: iki_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-12-04",
       "severity": "high",
       "tag": "motor",
-      "text": "ML anomaly score 91.0/100. Biggest driver: iki_var (+2.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 91.0/100. Biggest driver: iki_var (+2.1σ vs baseline)."
     },
     {
       "t": "2025-12-05",
       "severity": "medium",
       "tag": "motor",
-      "text": "ML anomaly score 62.5/100. Biggest driver: iki_var (+2.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 62.5/100. Biggest driver: iki_var (+2.1σ vs baseline)."
     },
     {
       "t": "2025-12-06",
       "severity": "high",
       "tag": "motor",
-      "text": "ML anomaly score 96.9/100. Biggest driver: iki_var (+2.3\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: iki_var (+2.3σ vs baseline)."
     },
     {
       "t": "2025-12-07",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+4.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+4.6σ vs baseline)."
     },
     {
       "t": "2025-12-08",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.3\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.3σ vs baseline)."
     },
     {
       "t": "2025-12-09",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.8\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.8σ vs baseline)."
     },
     {
       "t": "2025-12-10",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 88.0/100. Biggest driver: backspace_rate (+7.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 88.0/100. Biggest driver: backspace_rate (+7.1σ vs baseline)."
     },
     {
       "t": "2025-12-11",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.7/100. Biggest driver: backspace_rate (+9.8\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.7/100. Biggest driver: backspace_rate (+9.8σ vs baseline)."
     },
     {
       "t": "2025-12-12",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+10.9\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+10.9σ vs baseline)."
     },
     {
       "t": "2025-12-13",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.5σ vs baseline)."
     },
     {
       "t": "2025-12-14",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.6σ vs baseline)."
     },
     {
       "t": "2025-12-15",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.8\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.8σ vs baseline)."
     },
     {
       "t": "2025-12-16",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+14.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+14.5σ vs baseline)."
     },
     {
       "t": "2025-12-17",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+16.2\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+16.2σ vs baseline)."
     }
   ],
   "explanations": [
@@ -803,181 +803,181 @@
       "t": "2025-11-18",
       "severity": "low",
       "tag": "motor",
-      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1σ vs baseline)."
     },
     {
       "t": "2025-11-19",
       "severity": "low",
       "tag": "motor",
-      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1σ vs baseline)."
     },
     {
       "t": "2025-11-20",
       "severity": "low",
       "tag": "motor",
-      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 18.9/100. Biggest driver: iki_var (-1.1σ vs baseline)."
     },
     {
       "t": "2025-11-21",
       "severity": "medium",
       "tag": "motor",
-      "text": "ML anomaly score 66.9/100. Biggest driver: iki_var (-1.4\u03c3 vs baseline)."
+      "text": "ML anomaly score 66.9/100. Biggest driver: iki_var (-1.4σ vs baseline)."
     },
     {
       "t": "2025-11-22",
       "severity": "high",
       "tag": "motor",
-      "text": "ML anomaly score 88.5/100. Biggest driver: iki_var (+1.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 88.5/100. Biggest driver: iki_var (+1.6σ vs baseline)."
     },
     {
       "t": "2025-11-23",
       "severity": "low",
       "tag": "fatigue",
-      "text": "ML anomaly score 2.0/100. Biggest driver: backspace_rate (-1.2\u03c3 vs baseline)."
+      "text": "ML anomaly score 2.0/100. Biggest driver: backspace_rate (-1.2σ vs baseline)."
     },
     {
       "t": "2025-11-24",
       "severity": "low",
       "tag": "motor",
-      "text": "ML anomaly score 0.0/100. Biggest driver: iki_var (+0.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 0.0/100. Biggest driver: iki_var (+0.6σ vs baseline)."
     },
     {
       "t": "2025-11-25",
       "severity": "medium",
       "tag": "attention",
-      "text": "ML anomaly score 60.5/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 60.5/100. Biggest driver: rt_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-11-26",
       "severity": "low",
       "tag": "attention",
-      "text": "ML anomaly score 20.0/100. Biggest driver: rt_var (+1.4\u03c3 vs baseline)."
+      "text": "ML anomaly score 20.0/100. Biggest driver: rt_var (+1.4σ vs baseline)."
     },
     {
       "t": "2025-11-27",
       "severity": "medium",
       "tag": "attention",
-      "text": "ML anomaly score 56.2/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 56.2/100. Biggest driver: rt_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-11-28",
       "severity": "high",
       "tag": "attention",
-      "text": "ML anomaly score 86.7/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 86.7/100. Biggest driver: rt_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-11-29",
       "severity": "high",
       "tag": "attention",
-      "text": "ML anomaly score 75.7/100. Biggest driver: rt_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 75.7/100. Biggest driver: rt_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-11-30",
       "severity": "medium",
       "tag": "fatigue",
-      "text": "ML anomaly score 48.0/100. Biggest driver: backspace_rate (-0.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 48.0/100. Biggest driver: backspace_rate (-0.6σ vs baseline)."
     },
     {
       "t": "2025-12-01",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 100.0/100. Biggest driver: backspace_rate (-1.7\u03c3 vs baseline)."
+      "text": "ML anomaly score 100.0/100. Biggest driver: backspace_rate (-1.7σ vs baseline)."
     },
     {
       "t": "2025-12-02",
       "severity": "low",
       "tag": "fatigue",
-      "text": "ML anomaly score 38.0/100. Biggest driver: backspace_rate (-1.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 38.0/100. Biggest driver: backspace_rate (-1.6σ vs baseline)."
     },
     {
       "t": "2025-12-03",
       "severity": "medium",
       "tag": "motor",
-      "text": "ML anomaly score 66.2/100. Biggest driver: iki_var (+1.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 66.2/100. Biggest driver: iki_var (+1.5σ vs baseline)."
     },
     {
       "t": "2025-12-04",
       "severity": "high",
       "tag": "motor",
-      "text": "ML anomaly score 91.0/100. Biggest driver: iki_var (+2.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 91.0/100. Biggest driver: iki_var (+2.1σ vs baseline)."
     },
     {
       "t": "2025-12-05",
       "severity": "medium",
       "tag": "motor",
-      "text": "ML anomaly score 62.5/100. Biggest driver: iki_var (+2.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 62.5/100. Biggest driver: iki_var (+2.1σ vs baseline)."
     },
     {
       "t": "2025-12-06",
       "severity": "high",
       "tag": "motor",
-      "text": "ML anomaly score 96.9/100. Biggest driver: iki_var (+2.3\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: iki_var (+2.3σ vs baseline)."
     },
     {
       "t": "2025-12-07",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+4.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+4.6σ vs baseline)."
     },
     {
       "t": "2025-12-08",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.3\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.3σ vs baseline)."
     },
     {
       "t": "2025-12-09",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.8\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+6.8σ vs baseline)."
     },
     {
       "t": "2025-12-10",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 88.0/100. Biggest driver: backspace_rate (+7.1\u03c3 vs baseline)."
+      "text": "ML anomaly score 88.0/100. Biggest driver: backspace_rate (+7.1σ vs baseline)."
     },
     {
       "t": "2025-12-11",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.7/100. Biggest driver: backspace_rate (+9.8\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.7/100. Biggest driver: backspace_rate (+9.8σ vs baseline)."
     },
     {
       "t": "2025-12-12",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+10.9\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+10.9σ vs baseline)."
     },
     {
       "t": "2025-12-13",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.5σ vs baseline)."
     },
     {
       "t": "2025-12-14",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.6\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.6σ vs baseline)."
     },
     {
       "t": "2025-12-15",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.8\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+13.8σ vs baseline)."
     },
     {
       "t": "2025-12-16",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+14.5\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+14.5σ vs baseline)."
     },
     {
       "t": "2025-12-17",
       "severity": "high",
       "tag": "fatigue",
-      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+16.2\u03c3 vs baseline)."
+      "text": "ML anomaly score 96.9/100. Biggest driver: backspace_rate (+16.2σ vs baseline)."
     }
   ]
 }
