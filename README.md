@@ -1,4 +1,4 @@
-# NeuroSentinel (Neuro Variability Index)
+# NeuroBaseline (Neuro Variability Index)
 
 NeuroSentinel is a lightweight neuro-behavioral screening prototype that tracks
 personalized stability over time and detects persistent drift using transparent
