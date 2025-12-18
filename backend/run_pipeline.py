@@ -10,19 +10,18 @@ from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 
 
-# --------------------------
-# 1) Synthetic data
-# --------------------------
+# synthetic data
+
 def make_synth(n_days: int = 30, drift_day: int = 20, seed: int = 7) -> pd.DataFrame:
     rng = np.random.default_rng(seed)
     dates = pd.date_range(end=pd.Timestamp.today().normalize(), periods=n_days, freq="D")
 
-    # Baseline signals
-    rt = rng.normal(320, 18, size=n_days)          # reaction time (ms)
-    iki = rng.normal(145, 9, size=n_days)          # inter-key interval (ms)
+    # baseline signals
+    rt = rng.normal(320, 18, size=n_days)          # reaction time ms
+    iki = rng.normal(145, 9, size=n_days)          # inter-key interval ms
     bs = np.clip(rng.normal(0.06, 0.015, size=n_days), 0, 0.25)  # backspace rate
 
-    # Inject drift (higher variability + mild shifts)
+    # inject drift higher variability and mild shifts
     idx = drift_day - 1
     rt[idx:] += rng.normal(0, 25, size=n_days - idx)
     iki[idx:] += rng.normal(0, 14, size=n_days - idx)
@@ -31,24 +30,24 @@ def make_synth(n_days: int = 30, drift_day: int = 20, seed: int = 7) -> pd.DataF
     return pd.DataFrame({"t": dates, "rt_ms": rt, "iki_ms": iki, "backspace_rate": bs})
 
 
-# --------------------------
-# 2) Feature extraction
-# --------------------------
+# feature extraction
+
 def add_features(df: pd.DataFrame, window: int = 7) -> pd.DataFrame:
     d = df.sort_values("t").reset_index(drop=True).copy()
 
-    # Rolling variances + rolling mean for backspace_rate
+    # rolling variances and rolling mean for backspace
     d["rt_var"] = d["rt_ms"].rolling(window, min_periods=3).var()
     d["iki_var"] = d["iki_ms"].rolling(window, min_periods=3).var()
     d["bs_mean"] = d["backspace_rate"].rolling(window, min_periods=3).mean()
 
+    # fill edges where rolling window is small
     d[["rt_var", "iki_var", "bs_mean"]] = d[["rt_var", "iki_var", "bs_mean"]].bfill().ffill()
     return d
 
 
-# --------------------------
-# 3) Baseline + NVI (100 = most stable)
-# --------------------------
+# baseline and nvi (100 = most stable)
+
+# robust z scoring using median absolute deviation for robustness to outliers
 def robust_z(series: pd.Series, base: pd.Series) -> pd.Series:
     center = float(np.median(base))
     scale = float(median_abs_deviation(base, scale="normal") + 1e-9)
@@ -72,11 +71,12 @@ def compute_nvi(d: pd.DataFrame, baseline_days: int = 10) -> pd.DataFrame:
     drift = 0.45 * p_rt + 0.35 * p_iki + 0.20 * p_bs
     out["drift_raw"] = drift
 
-    # smooth drift to avoid single-day spikes
+    # smooth drift to avoid single day spikes using exponential smoothing
     try:
         fit = ExponentialSmoothing(drift, trend=None, seasonal=None, initialization_method="estimated").fit()
         out["drift_smooth"] = fit.fittedvalues
     except Exception:
+        # fallback to raw drift if smoothing fails
         out["drift_smooth"] = out["drift_raw"]
 
     # Convert drift -> stability score (100 = most stable)
@@ -84,20 +84,16 @@ def compute_nvi(d: pd.DataFrame, baseline_days: int = 10) -> pd.DataFrame:
     return out
 
 
-# --------------------------
-# 4) Change-point detection on NVI
-# --------------------------
+# change-point detection on NVI
 def change_points_from_series(series: pd.Series, pen: float = 8.0) -> list[int]:
     y = series.to_numpy().reshape(-1, 1)
     algo = rpt.Pelt(model="rbf").fit(y)
-    cps = algo.predict(pen=pen)                    # includes last index = n
-    cps = [cp for cp in cps if cp < len(series)]   # drop the terminal point
+    cps = algo.predict(pen=pen)  # predict returns list including terminal index
+    cps = [cp for cp in cps if cp < len(series)]  # remove terminal index
     return cps
 
 
-# --------------------------
-# 5) Explanations (rule-based)
-# --------------------------
+# explanations (rule-based)
 def build_explanations(d: pd.DataFrame, cps: list[int], baseline_days: int = 10) -> list[dict]:
     base = d.iloc[:baseline_days]
     base_rt = float(base["rt_var"].median())
@@ -105,7 +101,7 @@ def build_explanations(d: pd.DataFrame, cps: list[int], baseline_days: int = 10)
     base_bs = float(base["bs_mean"].median())
 
     expl = []
-    for cp in cps[:2]:  # keep 1–2 explanations
+    for cp in cps[:2]:  # keep 1 to 2 explanations
         row = d.iloc[cp]
 
         # % change vs baseline
@@ -136,18 +132,15 @@ def build_explanations(d: pd.DataFrame, cps: list[int], baseline_days: int = 10)
     return expl
 
 
-# --------------------------
-# 6) Convert df column -> timepoints
-# --------------------------
+# convert df column to timepoints
 def to_timepoints(d: pd.DataFrame, col: str) -> list[dict]:
     return [{"t": t.date().isoformat(), "value": float(v)} for t, v in zip(d["t"], d[col])]
 
 
-# --------------------------
-# 7) ML anomaly scoring (Isolation Forest) + driver attribution
-# --------------------------
+# ml anomaly scoring (isolation forest) and driver attribution
+# train isolation forest on baseline then score all days and attribute driver by z score
 def build_ml_series(scored: pd.DataFrame, baseline_days: int) -> tuple[list[dict], list[dict]]:
-    # Feature matrix
+    # feature matrix
     X = np.column_stack([
         scored["rt_var"].to_numpy(),
         scored["iki_var"].to_numpy(),
@@ -157,10 +150,11 @@ def build_ml_series(scored: pd.DataFrame, baseline_days: int) -> tuple[list[dict
     ml_series: list[dict] = []
     ml_explanations: list[dict] = []
 
+    # need enough days to train and score
     if len(X) <= baseline_days + 2:
         return ml_series, ml_explanations
 
-    # Scale using baseline
+    # scale using baseline only
     scaler = StandardScaler()
     X_base = scaler.fit_transform(X[:baseline_days])
     X_all = scaler.transform(X)
@@ -168,26 +162,27 @@ def build_ml_series(scored: pd.DataFrame, baseline_days: int) -> tuple[list[dict
     model = IsolationForest(n_estimators=200, random_state=42, contamination="auto")
     model.fit(X_base)
 
-    # Higher = more anomalous (flip sign)
+    # higher means more anomalous so flip sign
     raw = -model.score_samples(X_all)
 
-    # Normalize 0–100
+    # normalize to 0-100
     scores = (raw - raw.min()) / (raw.max() - raw.min() + 1e-9) * 100
 
-    # Driver attribution via z-score vs baseline
+    # driver attribution via z-score vs baseline
     base_mean = X[:baseline_days].mean(axis=0)
     base_std = X[:baseline_days].std(axis=0) + 1e-9
     z = (X - base_mean) / base_std
 
-    feat_names = ["rt_var", "iki_var", "backspace_rate"]
+    # feature names correspond to columns in X
+    feat_names = ["rt_var", "iki_var", "bs_mean"]
 
+    # map feature to tag
     def tag_for(feature_name: str) -> str:
         if feature_name == "rt_var":
             return "attention"
         if feature_name == "iki_var":
             return "motor"
         return "fatigue"
-
     for i, tstamp in enumerate(scored["t"]):
         day = tstamp.date().isoformat()
         s = float(scores[i])
@@ -237,10 +232,9 @@ def main():
         },
         "ml": ml_series,
         "ml_explanations": ml_explanations,
-        # Keep UI working with zero frontend edits:
+        # keep ui working without frontend edits
         "explanations": rule_explanations + ml_explanations,
     }
-
     with open("results.json", "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
     print("Wrote results.json")
