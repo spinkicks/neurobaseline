@@ -281,13 +281,6 @@ export default function Home() {
       {/* Header */}
       <header className="header">
         <div className="header-left">
-          <div className="logo">
-            <span className="logo-icon">🧬</span>
-            <span className="logo-text">Neurobaseline</span>
-          </div>
-          <span className="badge">Demo</span>
-        </div>
-        <div className="header-right">
           <span className="status-indicator" />
           <span className="status-text">Live</span>
           <span className="status-text" style={{ marginLeft: 10 }}>
@@ -298,8 +291,8 @@ export default function Home() {
 
       {/* Hero */}
       <section className="hero">
-        <h1>Cognitive Stability Dashboard</h1>
-        <p>Real-time neural variability tracking and analysis powered by machine learning</p>
+        <h1>Neurobaseline</h1>
+        <p>Cognitive Stability Dashboard: Real-time neural variability tracking and analysis powered by machine learning</p>
       </section>
 
       {/* Stats row */}

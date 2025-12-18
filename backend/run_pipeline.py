@@ -1,3 +1,15 @@
+"""
+Run the pipeline that produces `results.json`.
+
+This script (by default) synthesizes typing data, extracts features, computes a
+stability score (NVI), detects change-points, and runs a simple ML-based
+anomaly detector. It then builds human-readable explanations and writes a
+`results.json` file (used by the API and frontend).
+
+Run standalone with: python run_pipeline.py
+Or invoke it from the API to refresh backend/results.json.
+"""
+
 import json
 import numpy as np
 import pandas as pd
