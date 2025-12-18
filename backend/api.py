@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 """
-Neurobaseline backend API.
+NeuroBaseline backend API.
 
 This small FastAPI app exposes three endpoints:
 - GET /health : basic liveness check
@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent
 RESULTS_PATH = BASE_DIR / "results.json"  # the pipeline writes to this file
 PIPELINE_SCRIPT = BASE_DIR / "run_pipeline.py"  # script that generates results.json
 
-app = FastAPI(title="Neurobaseline API", version="0.1.0")
+app = FastAPI(title="NeuroBaseline API", version="0.1.0")
 
 # Allow Next.js dev server to call the API
 app.add_middleware(

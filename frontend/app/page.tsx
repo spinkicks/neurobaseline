@@ -194,7 +194,7 @@ export default function Home() {
       <div className="loading-screen">
         <div className="loading-content">
           <div className="loading-logo">
-            <span className="logo-text">Neurobaseline</span>
+            <span className="logo-text">NeuroBaseline</span>
           </div>
           <div className="loading-spinner" />
           <p>Loading neural data...</p>
@@ -292,7 +292,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="hero">
-        <h1>Neurobaseline</h1>
+        <h1>NeuroBaseline</h1>
         <p>Cognitive Stability Dashboard: Real-time neural variability tracking and analysis powered by machine learning</p>
       </section>
 
@@ -423,7 +423,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>Built by David and Haren • Neurobaseline © 2025</p>
+        <p>Built by David and Haren • NeuroBaseline © 2025</p>
       </footer>
 
       <style jsx>{`
