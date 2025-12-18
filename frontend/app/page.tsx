@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
+import Particles from "@/components/Particles";
 
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
@@ -46,7 +47,7 @@ function StatCard({
       )}
       <style jsx>{`
         .stat-card {
-          background: linear-gradient(135deg, #18181b 0%, #1f1f23 100%);
+          background: transparent;
           border: 1px solid #27272a;
           border-radius: 16px;
           padding: 20px 24px;
@@ -193,7 +194,6 @@ export default function Home() {
       <div className="loading-screen">
         <div className="loading-content">
           <div className="loading-logo">
-            <span className="logo-icon">◉</span>
             <span className="logo-text">Neurobaseline</span>
           </div>
           <div className="loading-spinner" />
@@ -278,6 +278,7 @@ export default function Home() {
 
   return (
     <div className="dashboard">
+      <Particles className="particles-container" />
       {/* Header */}
       <header className="header">
         <div className="header-left">
@@ -434,6 +435,8 @@ export default function Home() {
           display: flex;
           flex-direction: column;
           gap: 24px;
+          position: relative;
+          z-index: 2;
         }
 
         /* Header */
@@ -464,7 +467,7 @@ export default function Home() {
           letter-spacing: -0.5px;
         }
         .badge {
-          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          background: #6366f1;
           color: white;
           font-size: 11px;
           font-weight: 600;
@@ -504,7 +507,7 @@ export default function Home() {
         .hero {
           text-align: center;
           padding: 48px 24px;
-          background: linear-gradient(180deg, rgba(99, 102, 241, 0.08) 0%, transparent 100%);
+          background: transparent;
           border-radius: 24px;
           border: 1px solid #27272a;
         }
@@ -537,7 +540,7 @@ export default function Home() {
 
         /* Cards */
         .card {
-          background: #18181b;
+          background: transparent;
           border: 1px solid #27272a;
           border-radius: 20px;
           padding: 24px;
@@ -597,7 +600,7 @@ export default function Home() {
           padding-right: 8px;
         }
         .insight-item {
-          background: #1f1f23;
+          background: transparent;
           border: 1px solid #27272a;
           border-radius: 12px;
           padding: 16px;
@@ -605,7 +608,7 @@ export default function Home() {
         }
         .insight-item:hover {
           border-color: #3f3f46;
-          background: #252529;
+          background: rgba(37, 37, 41, 0.5);
         }
         .insight-header {
           display: flex;
