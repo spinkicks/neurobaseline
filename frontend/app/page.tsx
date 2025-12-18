@@ -122,7 +122,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/results.json")
+    fetch("http://127.0.0.1:8000/results")
       .then((r) => r.json())
       .then((j) => {
         setData(j);
