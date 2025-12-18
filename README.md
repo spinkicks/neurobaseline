@@ -31,3 +31,8 @@ relative to a user’s own baseline.
 ## UN SDGs
 - SDG 3: Good Health & Well-Being
 - SDG 10: Reduced Inequalities
+
+## Credits
+- Concept & ML: Haren  
+- Full-stack engineering: Haren & David
+
