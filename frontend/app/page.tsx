@@ -16,7 +16,17 @@ type Results = {
 };
 
 // Stat card component
-function StatCard({ label, value, suffix, trend }: { label: string; value: string | number; suffix?: string; trend?: "up" | "down" | "neutral" }) {
+function StatCard({
+  label,
+  value,
+  suffix,
+  trend,
+}: {
+  label: string;
+  value: string | number;
+  suffix?: string;
+  trend?: "up" | "down" | "neutral";
+}) {
   const trendColors = {
     up: "#22c55e",
     down: "#ef4444",
@@ -86,6 +96,7 @@ function SeverityBadge({ severity }: { severity: string }) {
     low: { bg: "rgba(34, 197, 94, 0.1)", text: "#22c55e", border: "rgba(34, 197, 94, 0.3)" },
   };
   const color = colors[severity.toLowerCase()] || colors.low;
+
   return (
     <span
       style={{
@@ -139,11 +150,19 @@ export default function Home() {
     if (!data?.nvi?.length) return null;
     const values = data.nvi.map((p) => p.value);
     const current = values[values.length - 1];
-    const prev = values[values.length - 2] || current;
+    const prev = values[values.length - 2] ?? current;
     const avg = values.reduce((a, b) => a + b, 0) / values.length;
     const trend = current > prev ? "up" : current < prev ? "down" : "neutral";
-    return { current: Math.round(current), avg: Math.round(avg), trend, changePoints: data.change_points?.length || 0 };
+    return {
+      current: Math.round(current),
+      avg: Math.round(avg),
+      trend,
+      changePoints: data.change_points?.length || 0,
+    };
   }, [data]);
+
+  const lastAnalyzed =
+    data?.nvi?.length ? data.nvi[data.nvi.length - 1].t : "—";
 
   // Dark theme for Plotly
   const plotLayout = {
@@ -210,7 +229,9 @@ export default function Home() {
             animation: spin 1s linear infinite;
           }
           @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+              transform: rotate(360deg);
+            }
           }
           p {
             color: #71717a;
@@ -262,10 +283,13 @@ export default function Home() {
         <div className="header-right">
           <span className="status-indicator" />
           <span className="status-text">Live</span>
+          <span className="status-text" style={{ marginLeft: 10 }}>
+            Last analyzed: {lastAnalyzed}
+          </span>
         </div>
       </header>
 
-      {/* Hero section */}
+      {/* Hero */}
       <section className="hero">
         <h1>Cognitive Stability Dashboard</h1>
         <p>Real-time neural variability tracking and analysis powered by machine learning</p>
@@ -273,12 +297,18 @@ export default function Home() {
 
       {/* Stats row */}
       {stats && (
-        <section className="stats-row">
-          <StatCard label="Current NVI" value={stats.current} suffix="/100" trend={stats.trend as "up" | "down" | "neutral"} />
-          <StatCard label="Average NVI" value={stats.avg} suffix="/100" />
-          <StatCard label="Change Points" value={stats.changePoints} />
-          <StatCard label="Features Tracked" value={featureOptions.length} />
-        </section>
+        <>
+          <section className="stats-row">
+            <StatCard label="Current NVI" value={stats.current} suffix="/100" trend={stats.trend} />
+            <StatCard label="Average NVI" value={stats.avg} suffix="/100" />
+            <StatCard label="Change Points" value={stats.changePoints} />
+            <StatCard label="Features Tracked" value={featureOptions.length} />
+          </section>
+
+          <p className="stats-explainer">
+            NVI reflects stability relative to your personal baseline. Anomaly score reflects day-to-day deviation magnitude.
+          </p>
+        </>
       )}
 
       {/* Main grid */}
@@ -354,11 +384,7 @@ export default function Home() {
           </div>
           <div className="feature-select">
             <label htmlFor="feature-select">Feature</label>
-            <select
-              id="feature-select"
-              value={featureKey}
-              onChange={(e) => setFeatureKey(e.target.value)}
-            >
+            <select id="feature-select" value={featureKey} onChange={(e) => setFeatureKey(e.target.value)}>
               {featureOptions.map((k) => (
                 <option key={k} value={k}>
                   {k.replace(/_/g, " ")}
@@ -460,8 +486,13 @@ export default function Home() {
           animation: pulse 2s infinite;
         }
         @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.5; }
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.5;
+          }
         }
         .status-text {
           font-size: 13px;
@@ -497,6 +528,11 @@ export default function Home() {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
           gap: 16px;
+        }
+        .stats-explainer {
+          margin: 8px 2px 0;
+          font-size: 12px;
+          color: #71717a;
         }
 
         /* Cards */
@@ -634,5 +670,4 @@ export default function Home() {
     </div>
   );
 }
-
 
