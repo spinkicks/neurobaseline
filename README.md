@@ -31,6 +31,7 @@ relative to a user’s own baseline.
 ## UN SDGs
 - SDG 3: Good Health & Well-Being
 - SDG 10: Reduced Inequalities
+- SDG 9: Innovation
 
 ## Credits
 Haren & David
