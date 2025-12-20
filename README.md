@@ -6,6 +6,7 @@ statistical methods.
 
 ## To Run Locally
 Backend: python -m uvicorn api:app --reload --host 127.0.0.1 --port 8000
+
 Frontend: npm run dev
 
 ## What it does
