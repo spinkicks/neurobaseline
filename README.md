@@ -4,6 +4,10 @@ NeuroBaseline is a lightweight neuro-behavioral screening prototype that tracks
 personalized stability over time and detects persistent drift using transparent
 statistical methods.
 
+## To Run Locally
+Backend: python -m uvicorn api:app --reload --host 127.0.0.1 --port 8000
+Frontend: npm run dev
+
 ## What it does
 - Builds a personalized baseline for each user
 - Tracks variability in:
