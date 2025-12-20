@@ -398,14 +398,18 @@ export default function Home() {
           <Plot
             data={[
               {
-                x: featX,
-                y: featY,
-                type: "scatter",
-                mode: "lines+markers",
-                name: featureKey,
-                line: { color: "#22c55e", width: 2 },
-                marker: { size: 6, color: "#22c55e" },
-              },
+  x: featX,
+  y: featY,
+  type: "scatter",
+  mode: "lines+markers",
+  name: featureKey,
+  line: { color: "#22c55e", width: 2 },
+  marker: { size: 6, color: "#22c55e" },
+  fill: "tozeroy",
+  fillcolor: "rgba(34, 197, 94, 0.12)",
+},
+
+
             ]}
             layout={{
               ...plotLayout,
@@ -423,7 +427,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="footer">
-        <p>Built by David and Haren • NeuroBaseline © 2025</p>
+        <p>Built by Haren & David • NeuroBaseline © 2025</p>
       </footer>
 
       <style jsx>{`
